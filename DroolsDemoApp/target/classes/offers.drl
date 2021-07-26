@@ -1,0 +1,23 @@
+import com.drools.demo.PaymentOffer
+
+rule "Offer for Paytm"
+	when
+		offerObject: PaymentOffer(channel=="Paytm")
+	then
+		offerObject.setDiscount(17);
+	end
+
+rule "Offer for Phonepe"
+	when
+		offerObject: PaymentOffer(channel=="Phonepe")
+	then
+		offerObject.setDiscount(20);
+	end
+
+rule "Offer for GPay"
+	when
+		offerObject: PaymentOffer(channel=="GPay")
+	then
+		offerObject.setDiscount(22);
+	end
+	
