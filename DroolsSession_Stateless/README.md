@@ -25,6 +25,10 @@ StatelessKieSession object instantiation.
 
 7. Commented kSession.fireAllRules() & kSession.insert(Object) methods since we're using StatelessKieSession object and replaced with
 kSession.execute(Object).
+	
+Note: If you see the output of DemoTest.java, there you can see the accumulate value as '1' even if PaymentCounter object is inserted
+'3' times into KieSession object and since it is stateless session then the previous count is not being maintained in the
+in the KieSession.
 
 Below are the dependencies that we need to add in pom.xml:
 <dependency>
