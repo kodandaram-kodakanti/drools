@@ -18,6 +18,10 @@ Example: accumulate (PaymentCounter(); $occurance : count())
 3. $temp & $occurance in counter.drl: These are the variables for PaymentCounter.java class.
 4. count() in counter.drl: It is a predefined method from Drools.
 
+Note: If you see the output of DemoTest.java, there you can see the accumulate value as '3' since PaymentCounter object is inserted
+'3' times into KieSession object and since it is stateful session then the previous count is being incremented
+by 1 every time when we insert a new PaymentCounter object into KieSession.
+
 Below are the dependencies that we need to add in pom.xml:
 <dependency>
 			<groupId>org.kie</groupId>
